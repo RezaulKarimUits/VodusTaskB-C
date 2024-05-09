@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@5.3.3",
+      "destination": "wwwroot/lib/twitter-bootstrap/"
+    },
+    {
+      "library": "bootstrap-daterangepicker@3.0.5",
+      "destination": "wwwroot/bootstrap-daterangepicker/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap-multiselect@1.1.2",
+      "destination": "wwwroot/bootstrap-multiselect/"
+    }
+  ]
+}

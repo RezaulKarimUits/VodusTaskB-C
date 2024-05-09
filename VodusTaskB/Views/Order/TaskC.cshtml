@@ -1,0 +1,46 @@
+﻿@using VodusTaskB.Models
+@model List<OrderViewModel>
+
+
+<select id="example-id">
+    <option value="Id">Id</option>
+    <option value="Name">Name</option>
+    <option value="Image">Image</option>
+    <option value="OrderDate">OrderDate</option>
+    <option value="Price">Price</option>
+    <option value="DiscountedPrice">Discounted Price</option>
+</select>
+
+
+<div class="text-center">
+    <h1>Orders</h1>
+    <table class="table1" id="orderTable">
+        <thead>
+            <tr>
+                <th class="sorted">Order Id</th>
+                <th class="sorted">Name</th>
+                <th class="sorted">Image</th>
+                <th class="sorted">Date</th>
+                <th class="sorted">Price</th>
+                <th class="sorted">Discounted Price</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.Name</td>
+                    <td>  <img src="@order.Image" alt="Order Image" style="max-width: 100px; max-height: 100px;" /></td>
+                    <td>@order.OrderDate.ToString("dd-MMM-yy")</td>
+                    <td>@order.Price</td>
+                    <td>@order.DiscountedPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@section Scripts {
+    <script src="~/js/Order.js"></script>
+}
